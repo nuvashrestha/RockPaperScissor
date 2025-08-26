@@ -13,17 +13,33 @@
         <p>First to score 5 wins the game!</p>
     </header>
 
-    <p id="score"> </p>
-    <h2> Choose your move</h2>
-    <div class="humanChoiceButtons">
-        <button id="rockButton">Rock</button>
-        <button id="paperButton">Paper</button>
-        <button id="scissorsButton">Scissors</button>
-    </div>
+    <main class="gameContainer">
+        <section class="playerMoves">
+            <h4>Choose your move</h4>
+            <div class="humanChoiceButtons">
+                <button id="rockButton">Rock</button>
+                <button id="paperButton">Paper</button>
+                <button id="scissorsButton">Scissors</button>
+            </div>
+        </section>
 
-    <div id="results">
-    </div>
+        <section class="choicesDisplay">
+            <p id="humanChoice">You chose: ❓</p>
+            <p id="computerChoice">Computer chose: ❓</p>
+        </section>
 
+        <section class="gameStatus">
+            <div id="score"> </div>
+            <div id="finalResults"></div>
+            <div id="roundResults">
+                <p>Game History</p>
+            </div>
+        </section>
+
+
+
+
+    </main>
     <script src="script.js"> </script>
 </body>
 
