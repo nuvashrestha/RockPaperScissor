@@ -13,13 +13,6 @@ function getComputerChoice() {
     return array[randomNum];
 }
 
-// function to get the human choice (step 3)
-function getHumanChoice() {
-    let userInput = prompt("What will it be? Rock, Paper, or Scissors?");
-
-    return userInput.toLowerCase();
-}
-
 // step 5
 function playRound(humanChoice, computerChoice) {
     console.log(`Your choice: ${humanChoice}`);
@@ -68,33 +61,47 @@ function playRound(humanChoice, computerChoice) {
     // this only returns the last value in JS: return humanScore, computerScore;
 }
 function playGame() {
-    for (i = 0; i < 5; i++) {
-        const humanSelection = getHumanChoice();
-        const computerSelection = getComputerChoice();
-        
-        /* since humanScore and computerScore are global variables i do not need to assign them like this:
-        humanScore, computerScore = playRound(...);
-        */
+    const buttons = document.querySelectorAll(".humanChoiceButtons button");
 
-        playRound(humanSelection, computerSelection);
+    buttons.forEach(button => {
+        button.addEventListener("click", () => {
+            let humanSelection = button.textContent.toLowerCase();
+            let computerSelection = getComputerChoice();
+            playRound(humanSelection, computerSelection);
 
-        console.log(`Your score: ${humanScore}`);
-        console.log(`Computer's score: ${computerScore}`);
-    }
+            /* since humanScore and computerScore are global variables i do not need to assign them like this:
+            humanScore, computerScore = playRound(...);
+            */
+            let score = document.querySelector("#score");
+            score.textContent = `Your score: ${humanScore} \n Computer's score: ${computerScore}`;
 
-    if (humanScore > computerScore) {
-        console.log("You won the game! Congrats!");
-    }
-    else if (humanScore < computerScore) {
-        console.log("You lost the game!");
-    }
-    else if (humanScore == computerScore) {
-        console.log("It's a tie game!");
-    }
-    else {
-        console.log("Error getting the scores.");
-    }
+            if (humanScore == 5 || computerScore == 5) {
+                let resultDiv = document.querySelector("#results");
+                let endResult = document.createElement("p");
+                if (humanScore > computerScore) {
+                    endResult.textContent = "You won the game! Congrats, you were first to score 5 points!";
+                    resultDiv.appendChild(endResult);
+
+                }
+                else if (humanScore < computerScore) {
+                    endResult.textContent = "You lost the game! The computer was first to score 5 points";
+                    resultDiv.appendChild(endResult);
+
+                }
+                else if (humanScore == computerScore) {
+                    endResult.textContent = "It's a tie game!";
+                    resultDiv.appendChild(endResult);
+                }
+                else {
+                    endResult.textContent = "Error getting the scores.";
+                    resultDiv.appendChild(endResult);
+                }
+            }
+        });
+    });
 
 }
+
+// if (humanScore == 5|| computerScore == 5)
 
 playGame();
