@@ -1,0 +1,136 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(to right, #1f1c2c, #928dab);
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+}
+
+/* Header styling */
+header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    font-size: 1.2rem;
+    color: #ccc;
+}
+
+/* Main container */
+.gameContainer {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 600px;
+}
+
+/* Player move buttons */
+.playerMoves h4 {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.humanChoiceButtons {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 2rem;
+}
+
+.humanChoiceButtons button {
+    background-color: #4e54c8;
+    border: none;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.humanChoiceButtons button:hover {
+    background-color: #5f65d6;
+}
+
+/* Choices display */
+.choicesDisplay {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.choicesDisplay p {
+    font-size: 1.1rem;
+    margin: 0.5rem 0;
+}
+
+/* Game status */
+.gameStatus {
+    text-align: center;
+}
+
+#score {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+#finalResults p {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-top: 1rem;
+    color: #ffd700;
+}
+
+#roundResults {
+    margin-top: 1.5rem;
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 1rem;
+    border-radius: 15px;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+#gameHistoryText {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 0.8rem;
+    text-align: center;
+}
+
+#roundResults p {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    color: #eee;
+}
+
+footer {
+    margin-top: 3rem;
+    padding: 1.5rem;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
+    color: #ccc;
+    font-size: 0.95rem;
+}
+
+.footerContent p {
+    margin: 0.5rem 0;
+}
