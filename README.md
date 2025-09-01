@@ -1,4 +1,4 @@
-🪨📄✂️ Rock Paper Scissors Game
+###🪨📄✂️ Rock Paper Scissors Game
 A sleek, interactive Rock Paper Scissors game built with HTML, CSS, and JavaScript. First to score 5 wins the match! Designed with a modern UI and smooth gameplay experience.
 
 🚀 Features
