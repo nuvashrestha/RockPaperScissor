@@ -28,9 +28,10 @@ A sleek, interactive Rock Paper Scissors game built with **HTML**, **CSS**, and 
 To run the project locally:
 
 ```bash
-git clone https://github.com/yourusername/rock-paper-scissors-game.git
-cd rock-paper-scissors-game
+git clone https://github.com/nuvashrestha/RockPaperScissor.git
+cd RockPaperScissor
 ```
+
 ---
 
 ## ✨ **How to Play**
